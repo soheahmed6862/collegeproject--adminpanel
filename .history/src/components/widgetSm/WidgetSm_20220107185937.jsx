@@ -15,7 +15,6 @@ export default function WidgetSm() {
       try {
         const res=await userRequest.get("/all")
  setUser(res.data)
- console.log(res.data)
         
       } catch (error) {
         console.log(error)

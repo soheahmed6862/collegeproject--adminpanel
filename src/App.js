@@ -15,6 +15,7 @@ import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Login from "./pages/login/Login";
 import Lgout from "./pages/logout/Logout";
+import  Privateroute  from "./pages/privateroute/Privateroute";
 
 
 function App() {
@@ -25,16 +26,24 @@ function App() {
     
 <div>
 
-
-
+<Routes>
+  <Route  path="/login" element={  <Login />} /> 
+ 
+  </Routes>
+  <Topbar></Topbar>
     
   <div className="container">
- 
+
+
   <Sidebar />
 
    <Routes>       
 
-   <Route path="/" element={<Home />} /> 
+   <Route path="/"  element={
+<Privateroute>
+    <Home />
+    </Privateroute>
+   } /> 
 
    <Route path="/users" element={   <UserList/>} />
     
@@ -56,10 +65,7 @@ function App() {
 </Routes>
       
 <div>
-  <Routes>
-     <Route  path="/login" element={  <Login />} /> 
 
-  </Routes>
 </div>
 
       </div>

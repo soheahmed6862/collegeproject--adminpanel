@@ -11,7 +11,7 @@ export const login=async(dispatch,user)=>{
 try {
 const res= await userRequest.post("/login",user)
 dispatch(loginsuccess(res.data))
-console.log(res.data)
+// console.log(res.data)
 
      
 } catch (error) {

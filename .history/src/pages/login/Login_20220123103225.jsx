@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector ,} from 'react-redux';
-import {useNavigate} from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import { login } from '../../redux/apiCalls';
 
 
 const Login = () => {
 
- const navigate=useNavigate(true);
-    const admin=true;
 
+    const admin=true;
 
     const dispatch =useDispatch()
     const [username,setusernames] =useState(" ")
@@ -19,6 +17,15 @@ const Login = () => {
 
 
   login(dispatch,{username,password})
+
+
+ 
+   if(admin){
+    <Navigate to="/" />
+   }
+ 
+
+
 
 
     }
