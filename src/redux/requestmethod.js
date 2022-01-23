@@ -8,19 +8,17 @@ export const publick = axios.create({
     headers: {'X-Custom-Header': 'foobar'}
   });
 
-  const TOKEN=JSON.parse(localStorage.getItem("applicationState")).user.currentuser.accessToken;
-  console.log(TOKEN)
-  
+  // const TOKEN=JSON.parse(localStorage.getItem("applicationState")).user.currentuser.accessToken;
+
 export const userRequest= axios.create({
     baseURL: URL,
     timeout: 1500,
-    headers: {token: `Bearer ${TOKEN}`}
+    // headers: {token: `Bearer ${TOKEN}`}
   });
-  
+
   export const publicRequest= axios.create({
     baseURL: URL,
     timeout: 1500,
-    headers: {token: `Bearer ${TOKEN}`}
   });
   export const fileupoad= axios.create({
     baseURL: URL,
